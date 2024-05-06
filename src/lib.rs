@@ -129,7 +129,7 @@ impl Mode {
         fn next_val(pos: &mut usize, chars: &mut Chars) -> Result<Perm, ParseError> {
             let c = chars
                 .next()
-                .ok_or_else(|| ParseError::UnexpectedEoi { pos: *pos })?;
+                .ok_or(ParseError::UnexpectedEoi { pos: *pos })?;
             *pos += 1;
             Perm::from_num(&c.to_string()).map_err(|err| match err {
                 ParseError::UnexpectedChar {
