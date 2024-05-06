@@ -14,6 +14,12 @@ Install via Cargo:
 $ cargo install cchmod
 ```
 
+Or, if you are on NetBSD, a pre-compiled binary is available from the official repositories.
+To install it, simply run:
+```bash
+# pkgin install cchmod
+```
+
 ## Usage
 
 ```bash
